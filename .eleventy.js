@@ -233,8 +233,8 @@ module.exports = function(config) {
   return {
     dir: {
       input: "src",
-      output: "dist"
-	  layouts: "layouts",
+      output: "dist",
+	layouts: "layouts",
       data: "_data"
     },
 
