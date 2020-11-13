@@ -1,5 +1,4 @@
 ---
-layout: default-layout.html 
 tags: ['notes']
 title: Hello World
 date: 2020-01-01
