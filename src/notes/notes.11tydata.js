@@ -13,7 +13,7 @@ module.exports = {
     eleventyComputed: {
         title: data => titleCase(data.title || data.page.fileSlug),
         backlinks: (data) => {
-            const notes = data.collections.notes;
+            const notes = collections.notes;
             const currentFileSlug = data.page.fileSlug;
 
             let backlinks = [];
