@@ -233,10 +233,7 @@ module.exports = function(config) {
   return {
     dir: {
       input: "src",
-      output: "dist",
-      layouts: "layouts",
-      includes: "includes",
-      data: "_data"
+      output: "dist"
     },
 
     // Files read by Eleventy, add as needed
