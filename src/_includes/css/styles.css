@@ -546,7 +546,8 @@ h6 {
 .post-full-content {
   max-width: 720px;
   margin: 0 auto;
-  background: #fff;
+  background: black;
+  color: white;
 }
 
 .post-full-content figcaption {
@@ -774,6 +775,7 @@ h6 {
 
 .site-main {
   padding: 4vw 0;
+  background: black;
 }
 
 /* Index
