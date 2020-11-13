@@ -1,5 +1,7 @@
 ---
-title: About these notes
+title: hello
 ---
-# About these Notes
-These are some fake notes. Feel free to poke around. You may spot an [[easter egg]]  or two! Also, I like [[food]].
+
+# Bar
+
+Drink; drink and be merry. Have an [[easter egg]], or eat some other [[food]].
