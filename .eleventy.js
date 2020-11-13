@@ -1,6 +1,4 @@
-module.exports = function(eleventyConfig) {
-    
-    require("dotenv").config();
+require("dotenv").config();
 
 const cleanCSS = require("clean-css");
 const fs = require("fs");
@@ -196,8 +194,25 @@ module.exports = function(config) {
       }
     }
   });
-  
-  const markdownIt = require('markdown-it');
+
+  // Eleventy configuration
+  return {
+    dir: {
+      input: "src",
+      output: "dist"
+    },
+
+    // Files read by Eleventy, add as needed
+    templateFormats: ["css", "njk", "md", "txt"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+    passthroughFileCopy: true
+  };
+};
+
+module.exports = function(eleventyConfig) {
+    
+    const markdownIt = require('markdown-it');
     const markdownItOptions = {
         html: true,
         linkify: true
@@ -231,22 +246,18 @@ module.exports = function(config) {
     
     eleventyConfig.addPassthroughCopy('assets');
 
-  // Eleventy configuration
-  return {
-    dir: {
-      input: "src",
-      output: "dist",
-	  layouts: "layouts",
-      data: "_data"
-    },
-
-    // Files read by Eleventy, add as needed
-    templateFormats: ["css", "njk", "md", "txt"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    passthroughFileCopy: true
-  };
+    return {
+        useGitIgnore: false,
+        dir: {
+            input: "./",
+            output: "_site",
+            layouts: "layouts",
+            includes: "includes",
+            data: "_data"
+        },
+        templateFormats: ["css", "njk", "md", "txt"],
+		htmlTemplateEngine: "njk",
+		markdownTemplateEngine: "njk",
+		passthroughFileCopy: true
+    }
 };
-
-
-}
