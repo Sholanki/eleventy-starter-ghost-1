@@ -188,6 +188,7 @@ dfn {
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
+  color: white;
 }
 small {
   font-size: 80%;
@@ -366,6 +367,7 @@ ol,
 dl,
 blockquote {
   margin: 0 0 1.5em 0;
+  color: white;
 }
 
 ol,
@@ -588,11 +590,13 @@ h6 {
 .content-title {
   margin: 0 0 0.8em;
   font-size: 5rem;
+  color: white;
 }
 @media (max-width: 500px) {
   .content-title {
     margin: 0.8em 0;
     font-size: 3.4rem;
+	color: white;
   }
   .content {
     font-size: 1.8rem;
@@ -823,6 +827,7 @@ h6 {
 .post-card-title {
   margin: 0 0 10px 0;
   padding: 0;
+  color: white;
 }
 
 .post-card-excerpt {
