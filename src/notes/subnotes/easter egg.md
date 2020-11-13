@@ -1,3 +1,8 @@
+---
+title: hello
+tag tags: ['notes']
+---
+
 # Easter Egg
 
 Easter eggs are a thing.
