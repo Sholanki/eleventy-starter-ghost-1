@@ -194,25 +194,8 @@ module.exports = function(config) {
       }
     }
   });
-
-  // Eleventy configuration
-  return {
-    dir: {
-      input: "src",
-      output: "dist"
-    },
-
-    // Files read by Eleventy, add as needed
-    templateFormats: ["css", "njk", "md", "txt"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    passthroughFileCopy: true
-  };
-};
-
-module.exports = function(eleventyConfig) {
-    
-    const markdownIt = require('markdown-it');
+  
+  const markdownIt = require('markdown-it');
     const markdownItOptions = {
         html: true,
         linkify: true
@@ -234,30 +217,29 @@ module.exports = function(eleventyConfig) {
         })
     })
     
-    eleventyConfig.addFilter("markdownify", string => {
+    config.addFilter("markdownify", string => {
         return md.render(string)
     })
 
-    eleventyConfig.setLibrary('md', md);
+    config.setLibrary('md', md);
     
-    eleventyConfig.addCollection("notes", function (collection) {
+    config.addCollection("notes", function (collection) {
         return collection.getFilteredByGlob(["notes/**/*.md", "index.md"]);
     });
     
-    eleventyConfig.addPassthroughCopy('assets');
+    config.addPassthroughCopy('assets');
 
-    return {
-        useGitIgnore: false,
-        dir: {
-            input: "./",
-            output: "_site",
-            layouts: "layouts",
-            includes: "includes",
-            data: "_data"
-        },
-        templateFormats: ["css", "njk", "md", "txt"],
-		htmlTemplateEngine: "njk",
-		markdownTemplateEngine: "njk",
-		passthroughFileCopy: true
-    }
+  // Eleventy configuration
+  return {
+    dir: {
+      input: "src",
+      output: "dist"
+    },
+
+    // Files read by Eleventy, add as needed
+    templateFormats: ["css", "njk", "md", "txt"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+    passthroughFileCopy: true
+  };
 };
