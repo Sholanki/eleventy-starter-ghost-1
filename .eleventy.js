@@ -1,4 +1,6 @@
-require("dotenv").config();
+module.exports = function(eleventyConfig) {
+    
+    require("dotenv").config();
 
 const cleanCSS = require("clean-css");
 const fs = require("fs");
@@ -234,7 +236,7 @@ module.exports = function(config) {
     dir: {
       input: "src",
       output: "dist",
-	layouts: "layouts",
+	  layouts: "layouts",
       data: "_data"
     },
 
@@ -245,3 +247,6 @@ module.exports = function(config) {
     passthroughFileCopy: true
   };
 };
+
+
+}
