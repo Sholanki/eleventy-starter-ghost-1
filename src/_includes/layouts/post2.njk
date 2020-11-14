@@ -6,7 +6,7 @@
 
 {% block content %}
     <article class="content">
-       
+      <article> 
      {% for notes in collections.notes | reverse %}
     <li>
       <h3><a href="{{ notes.url | url }}">{{ notes.data.title }}</a> | {{ notes.date }}</h3>
@@ -15,7 +15,8 @@
       {% endif %} 
     </li>
   {% endfor %}
-
+</article>
+  {%  include 'layouts/backlinks.html' %}
         <section class="post-full-content">
             <h1 class="content-title">{{ title }}</h1>
             <section class="content-body load-external-scripts">
@@ -23,7 +24,7 @@
             </section>
         </section>
     </article>
-    {%  include 'layouts/backlinks.html' %}
+  
 {% endblock %}
 
 {%- block seo -%}
