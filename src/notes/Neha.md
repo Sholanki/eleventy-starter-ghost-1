@@ -1,5 +1,6 @@
 ---
 title: Neha
+tags: ['notes']
 ---
 
 # Neha
