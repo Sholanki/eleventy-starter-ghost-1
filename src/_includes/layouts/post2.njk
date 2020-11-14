@@ -18,6 +18,7 @@
             </section>
         </section>
     </article>
+    {%  include 'layouts/backlinks.html' %}
 {% endblock %}
 
 {%- block seo -%}
@@ -47,4 +48,3 @@
     <meta property="og:locale" content="{{ site.lang }}">
     <meta property="article:author" content="{{ site.url }}">
 {%- endblock -%}
-{%  extends 'layouts/backlinks.html' %}
