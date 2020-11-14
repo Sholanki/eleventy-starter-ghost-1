@@ -1,4 +1,4 @@
-const {titleCase} = require("title-case");
+htconst {titleCase} = require("title-case");
 
 // This regex finds all wikilinks in a string
 const wikilinkRegExp = /\[\[([\w\s/-]+)(.\w+)?\s?(\|\s?([\w\s/]+))?\]\]/g
@@ -8,7 +8,7 @@ function caselessCompare(a, b) {
 }
 
 module.exports = {
-    layout: "layouts/post2.njk",
+    layout: "layouts/note.html",
     type: "notes",
     eleventyComputed: {
         title: data => titleCase(data.title || data.page.fileSlug),
