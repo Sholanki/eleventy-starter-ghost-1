@@ -1,8 +1,5 @@
 <script>
-    module.exports = {
-    layout: "layouts/post2.html",
-    type: "note",
-    eleventyComputed: {
+   
         title: data => titleCase(data.title || data.page.fileSlug),
         backlinks: (data) => {
             const notes = data.collections.notes;
@@ -40,8 +37,7 @@
 
             return backlinks;
         }
-    }
-}
+   
 </script>
 <hr>
 <p class="backlinks-title larger">Backlinks</p>
