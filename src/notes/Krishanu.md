@@ -1,5 +1,6 @@
 ---
 title: Krishanu
+tags: ['notes']
 ---
 
 # Krishanu
