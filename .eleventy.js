@@ -224,7 +224,7 @@ module.exports = function(config) {
     config.setLibrary('md', md);
     
     config.addCollection("notes", function (collection) {
-        return collection.getFilteredByGlob(["notes/**/*.md", "index.md"]);
+        return collection.getFilteredByGlob(["notes/*.md", "index.md"]);
     });
     
     config.addPassthroughCopy('assets');
