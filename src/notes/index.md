@@ -1,5 +1,6 @@
 ---
 title: hello
+tags: ['notes']
 ---
 
 # Bar
