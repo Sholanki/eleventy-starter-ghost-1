@@ -20,7 +20,8 @@ const api = new ghostContentAPI({
 
 // Get all site information
 module.exports = async function() {
-    
+    layout: "post2.njk",
+    type: "notes",
     eleventyComputed: {
         title: data => titleCase(data.title || data.page.fileSlug),
         backlinks: (data) => {
