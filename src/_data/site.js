@@ -34,7 +34,7 @@ module.exports = async function() {
 };
 
 module.exports = {
-    layout: "post2.html",
+    layout: "default.html",
     type: "notes",
     eleventyComputed: {
         title: data => titleCase(data.title || data.page.fileSlug),
