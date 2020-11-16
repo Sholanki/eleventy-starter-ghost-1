@@ -19,7 +19,7 @@ const api = new ghostContentAPI({
 });
 
 // Get all site information
-module.exports = async function() {
+module.exports =  {
     layout: "post2.njk",
     type: "notes",
     eleventyComputed: {
