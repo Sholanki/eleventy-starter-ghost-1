@@ -23,7 +23,7 @@
         <li class="backlink">
             <a href="{{link.url}}" class="backlink__link">{{link.title}}</a>
             <div class="backlink__preview" role="none">
-                {{link.preview | htmlify}}
+                {{link.preview | content | safe}}
             </div>
         </li>
     {% endfor %}
