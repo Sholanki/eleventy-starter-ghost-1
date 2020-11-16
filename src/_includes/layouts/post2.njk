@@ -22,8 +22,8 @@
     {% for link in backlinks %}
         <li class="backlink">
             <a href="{{link.url}}" class="backlink__link">{{link.title}}</a>
-            <div class="backlink__preview" role="none">
-                {{link.preview  | safe}}
+            <div class="backlink__preview load-external-scripts" role="none">
+                {{ link.preview | safe}}
             </div>
         </li>
     {% endfor %}
