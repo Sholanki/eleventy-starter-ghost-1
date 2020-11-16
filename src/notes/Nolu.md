@@ -1,7 +1,7 @@
 ---
-title: Neha
+title: Nolu
 ---
 
-# Neha
+# Nolu
 
 Links to [[Platoon]] and [[Shoes]]. This is another link to [[Rishu]].

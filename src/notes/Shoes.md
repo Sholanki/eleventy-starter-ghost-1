@@ -1,7 +1,7 @@
 ---
-title: Sholanki
+title: Shoes
 ---
 
-# Sholanki
+# Shoes
 
 Links to [[Rishu]] and [[Nolu]]. This is another link to [[Platoon]].

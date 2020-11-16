@@ -1,7 +1,7 @@
 ---
-title: Playto
+title: Platoon
 ---
 
-# Playto
+# Platoon
 
 Links to [[Shoes]] and [[Nolu]]. This is another link to [[Sandman]].

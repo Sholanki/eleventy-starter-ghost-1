@@ -1,8 +1,8 @@
 ---
-title: Sandeep
+title: Sandman
 ---
 
-# Sandeep
+# Sandman
 
 Links to [[Shoes]] and [[Nolu]]. This is another link to [[Rishu]]. This is Sandy[^1]. also this is reference[^2]
 
