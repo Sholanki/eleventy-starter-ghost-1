@@ -20,22 +20,7 @@ const api = new ghostContentAPI({
 
 // Get all site information
 module.exports = async function() {
-  const siteData = await api.settings
-    .browse({
-      include: "icon,url"
-    })
-    .catch(err => {
-      console.error(err);
-    });
-
-  if (process.env.SITE_URL) siteData.url = process.env.SITE_URL;
-
-  return siteData;
-};
-
-module.exports = {
-    layout: "post2.html",
-    type: "notes",
+    
     eleventyComputed: {
         title: data => titleCase(data.title || data.page.fileSlug),
         backlinks: (data) => {
@@ -75,4 +60,16 @@ module.exports = {
             return backlinks;
         }
     }
+  const siteData = await api.settings
+    .browse({
+      include: "icon,url"
+    })
+    .catch(err => {
+      console.error(err);
+    });
+
+  if (process.env.SITE_URL) siteData.url = process.env.SITE_URL;
+
+  return siteData;
 };
+
