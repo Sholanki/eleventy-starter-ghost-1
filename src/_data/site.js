@@ -61,16 +61,6 @@ module.exports =  {
             return backlinks;
         }
     }
-  const siteData = await api.settings
-    .browse({
-      include: "icon,url"
-    })
-    .catch(err => {
-      console.error(err);
-    });
-
-  if (process.env.SITE_URL) siteData.url = process.env.SITE_URL;
-
-  return siteData;
+  
 };
 
