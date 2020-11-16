@@ -19,48 +19,17 @@ const api = new ghostContentAPI({
 });
 
 // Get all site information
-module.exports =  {
-    layout: "post2.njk",
-    type: "notes",
-    eleventyComputed: {
-        title: data => titleCase(data.title || data.page.fileSlug),
-        backlinks: (data) => {
-            const notes = data.collections.notes;
-            const currentFileSlug = data.page.fileSlug;
+module.exports = async function() {
+  const siteData = await api.settings
+    .browse({
+      include: "icon,url"
+    })
+    .catch(err => {
+      console.error(err);
+    });
 
-            let backlinks = [];
+  if (process.env.SITE_URL) siteData.url = process.env.SITE_URL;
 
-            // Search the other notes for backlinks
-            for(const otherNote of notes) {
-                const noteContent = otherNote.template.frontMatter.content;
-
-                // Get all links from otherNote
-                const outboundLinks = (noteContent.match(wikilinkRegExp) || [])
-                    .map(link => (
-                        // Extract link location
-                        link.slice(2,-2)
-                            .split("|")[0]
-                            .replace(/[^\w\s/-]+/g,'')
-                            .replace(/.(md|markdown)\s?$/i, "")
-                    ));
-
-                // If the other note links here, return related info
-                if(outboundLinks.some(link => caselessCompare(link, currentFileSlug))) {
-
-                    // Construct preview for hovercards
-                    let preview = noteContent.slice(0, 240);
-
-                    backlinks.push({
-                        url: otherNote.url,
-                        title: otherNote.data.title,
-                        preview
-                    })
-                }
-            }
-
-            return backlinks;
-        }
-    }
-  
+  return siteData;
 };
 
