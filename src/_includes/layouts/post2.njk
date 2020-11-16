@@ -22,7 +22,7 @@
     {% for link in backlinks %}
         <li class="backlink">
             <a href="{{link.url}}" class="backlink__link">{{link.title}}</a>
-            <section class="backlink__preview" role="none">
+            <section class="backlink__preview" role="none" style="background-color:black, color:white;">
                 {{ link.preview | markdownify | safe }}
             </section>
         </li>
