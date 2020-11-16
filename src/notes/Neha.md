@@ -1,8 +1,0 @@
----
-title: Neha
-tags: ['notes']
----
-
-# Neha
-
-Links to [[Playto]] and [[Sholanki]]. This is another link to [[Krishanu]].
