@@ -40,8 +40,7 @@ module.exports = {
 
                     backlinks.push({
                         url: otherNote.url,
-                        title: otherNote.data.title,
-                        preview
+                        title: otherNote.data.title
                     })
                 }
             }
