@@ -8,6 +8,7 @@
                 {{ site.title }} – {{ site.description }}
             {%- endif -%}
         </title>
+           {% include "partials/header.njk" %}
         <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
         <meta name="robots" content="index,follow">
         <meta name="generator" content="Eleventy">
@@ -58,7 +59,7 @@
         <div class="viewport">
 
             <div class="viewport-top">
-                {% include "partials/header.njk" %}
+             
 
                 <main class="site-main">
                     <div class="container">
