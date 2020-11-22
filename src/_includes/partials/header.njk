@@ -5,9 +5,7 @@
         <div class="site-mast">
             {% if site.logo %}
                 <div class="site-mast-left">
-                    <a {% if page.url == "/" %}aria-current="page"{% endif %} href="{{ site.url }}">
-                        <img class="site-logo" src="{{ site.logo }}" alt="{{ site.title }}">
-                    </a>
+                    {% include 'partials/navigation.njk' %}
                 </div>
             {% endif %}
             <div class="site-mast-right">
@@ -33,6 +31,6 @@
             </div>
         {% endif %}
 
-        {% include 'partials/navigation.njk' %}
+        
     </div>
 </header>
