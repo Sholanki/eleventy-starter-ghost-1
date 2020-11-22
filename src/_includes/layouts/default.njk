@@ -16,7 +16,7 @@
         {% if site.icon %}
             <link rel="shortcut icon" type="image/png" href="{{ site.icon }}"/>
         {% endif %}
-
+             {% include "partials/icons.njk" %}
         {%- block seo -%}
             <!--Twitter Card-->
             <meta name="twitter:site" content="{{ site.twitter }}">
@@ -54,7 +54,7 @@
         {{ codeinjection_head | safe if codeinjection_head }}
     </head>
     <body>
-        {% include "partials/icons.njk" %}
+       
         <div class="viewport">
 
             <div class="viewport-top">
