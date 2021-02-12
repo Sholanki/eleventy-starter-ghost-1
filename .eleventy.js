@@ -51,27 +51,8 @@ module.exports = function(config) {
 
   // Get all pages, called 'docs' to prevent
   // conflicting the eleventy page object
-  config.addCollection("docs", async function(collection) {
-    collection = await api.pages
-      .browse({
-        include: "authors",
-        limit: "all"
-      })
-      .catch(err => {
-        console.error(err);
-      });
 
-    collection.map(doc => {
-      doc.url = stripDomain(doc.url);
-      doc.primary_author.url = stripDomain(doc.primary_author.url);
-
-      // Convert publish date into a Date object
-      doc.published_at = new Date(doc.published_at);
-      return doc;
-    });
-
-    return collection;
-  });
+ 
 
  
     // Attach posts to their respective authors
