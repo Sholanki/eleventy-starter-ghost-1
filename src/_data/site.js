@@ -1,11 +1,11 @@
-require("dotenv").config();
+//require("dotenv").config();
 
-const ghostContentAPI = require("@tryghost/content-api");
+//const ghostContentAPI = require("@tryghost/content-api");
 
-const {titleCase} = require("title-case");
+//const {titleCase} = require("title-case");
 
 // This regex finds all wikilinks in a string
-const wikilinkRegExp = /\[\[([\w\s/-]+)(.\w+)?\s?(\|\s?([\w\s/]+))?\]\]/g
+/*const wikilinkRegExp = /\[\[([\w\s/-]+)(.\w+)?\s?(\|\s?([\w\s/]+))?\]\]/g
 
 function caselessCompare(a, b) {
     return a.toLowerCase() === b.toLowerCase();
@@ -31,4 +31,4 @@ module.exports = async function() {
   if (process.env.SITE_URL) siteData.url = process.env.SITE_URL;
 
   return siteData;
-};
+};*/
