@@ -1,11 +1,11 @@
-require("dotenv").config();
+//require("dotenv").config();
 
 const cleanCSS = require("clean-css");
 const fs = require("fs");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const localImages = require("eleventy-plugin-local-images");
 const lazyImages = require("eleventy-plugin-lazyimages");
-const ghostContentAPI = require("@tryghost/content-api");
+//const ghostContentAPI = require("@tryghost/content-api");
 
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 
